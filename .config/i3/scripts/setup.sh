@@ -49,6 +49,6 @@ cd ..
 rm -rf rofi
 
 echo "Done. Please run arandr and replace screen_layout.sh with your current setup."
-echo "dont forget to cp the contents of the base folder to you .config!"
+echo "dont forget to cp the contents of the base folder to your .config!"
 echo "Install firefox if you do not have it, and a display manager of your choice."
 echo "Do not forget to install a gtk3 theme and icons! Happy new system~"

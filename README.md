@@ -1,6 +1,7 @@
 # I3 Dotfiles
 
 # NOTE:
+### THE SETUP IS FOR ARCH BASED SYSTEMS ONLY!
 Please keep in mind that this was made for myself. I do not know how your pc will react to this.
 
 # Setup:
