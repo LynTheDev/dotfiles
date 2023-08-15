@@ -18,7 +18,7 @@ case $ANSWER in
 esac
 
 echo "Installing packages.."
-sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver i3 polybar dunst lxappearance 
+sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver i3 polybar dunst lxappearance python-dbus
 
 echo "Would you like to install xfce4-terminal, or konsole? (1/2)"
 read -r TERM
