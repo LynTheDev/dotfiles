@@ -1,7 +1,14 @@
 #!/bin/bash
 
-echo "This script has been made for arch ONLY. All this does is install dependencies."
-echo -n "Continue? (Y/n)"
+# Colours
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\33[0;36m'
+NC='\033[0m'
+
+printf "${RED}This script has been made for arch ONLY. All this does is install dependencies.${NC}"
+echo ""
+echo -n "Continue? (Y/n) "
 read -r ANSWER
 
 case $ANSWER in
@@ -17,10 +24,12 @@ case $ANSWER in
 	;;
 esac
 
-echo "Installing packages.."
-sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver i3 polybar dunst lxappearance python-dbus
+printf "${GREEN}Installing packages..${RED}"
+echo ""
+sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver i3 polybar dunst lxappearance 
 
-echo "Would you like to install xfce4-terminal, or konsole? (1/2)"
+printf "${BLUE}Would you like to install xfce4-terminal, or konsole? (1/2)${NC}"
+echo ""
 read -r TERM
 
 case $TERM in
@@ -35,10 +44,15 @@ case $TERM in
     ;;
 esac
 
-echo "Installing fonts..."
-sudo pacman -S ttf-font-awesome ttf-agave-nerd
+printf "${GREEN}Installing fonts...${NC}"
+sudo pacman -S ttf-font-awesome ttf-agave-nerd ttf-dejavu
 
-echo "Setting up rofi.."
+printf "${GREEN}Setting up external mounting...${NC}"
+echo ""
+sudo pacman -S udisks2 udiskie
+
+printf "${GREEN}Setting up rofi..${NC}"
+echo ""
 git clone --depth 1 https://github.com/adi1090x/rofi
 cd rofi
 chmod +x ./setup.sh
@@ -48,7 +62,8 @@ chmod +x ./setup.sh
 cd ..
 rm -rf rofi
 
-echo "Done. Please run arandr and replace screen_layout.sh with your current setup."
+printf "${GREEN}Done. Please run arandr and replace screen_layout.sh with your current setup."
+echo ""
 echo "dont forget to cp the contents of the base folder to your .config!"
 echo "Install firefox if you do not have it, and a display manager of your choice."
-echo "Do not forget to install a gtk3 theme and icons! Happy new system~"
+printf "Do not forget to install a gtk3 theme and icons! Happy new system~${NC}"

@@ -29,8 +29,9 @@ MiscShowUnsafePasteDialog=TRUE
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 TitleMode=TERMINAL_TITLE_HIDE
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=0.950000
+BackgroundDarkness=0.850000
 ColorBackground=#28282a2a2e2e
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-FontName=Monospace 11
+FontName=Agave Nerd Font Mono 12
+ColorPalette=rgb(0,0,0);rgb(170,0,0);rgb(85,255,85);rgb(170,85,0);rgb(0,0,170);rgb(170,0,170);rgb(0,170,170);rgb(170,170,170);rgb(85,85,85);rgb(255,85,85);rgb(85,255,85);rgb(255,255,85);rgb(85,85,255);rgb(255,85,255);rgb(85,255,255);rgb(255,255,255)
 

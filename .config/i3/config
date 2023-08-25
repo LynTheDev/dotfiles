@@ -182,7 +182,7 @@ bindsym $mod+r mode "resize"
 #    Added by Lyn, DO NOT TRUST
 
 # Disable window borders
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 # Take Screenshots using flameshot
 bindsym $mod+shift+s exec --no-startup-id flameshot gui
@@ -193,7 +193,7 @@ bindsym $mod+shift+s exec --no-startup-id flameshot gui
 exec --no-startup-id ~/.config/i3/scripts/screen_layout.sh
 
 # Start picom
-exec --no-startup-id picom
+exec --no-startup-id picom --config ~/.config/i3/scripts/picom.conf
 
 # Set wallpaper
 exec --no-startup-id feh --bg-scale ~/.config/i3/images/wallpaper.jpg
@@ -201,8 +201,11 @@ exec --no-startup-id feh --bg-scale ~/.config/i3/images/wallpaper.jpg
 # Start Polybar
 exec --no-startup-id polybar main &
 
-# Try powermenu
+# Powermenu
 bindsym $mod+shift+d exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
 
 # Notification daemon
 exec_always --no-startup-id dunst
+
+# Disk mounting
+exec --no-startup-id udiskie &
