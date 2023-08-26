@@ -24,14 +24,14 @@ case $ANSWER in
 	;;
 esac
 
-printf "${GREEN}Installing packages..${RED}"
+printf "${GREEN}Installing base packages..${RED}"
 echo ""
 sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver xautolock xfce4-terminal i3 i3lock polybar dunst lxappearance 
 
-printf "${GREEN}Installing fonts...${NC}"
+printf "${GREEN}Installing font packages...${NC}"
 sudo pacman -S ttf-font-awesome ttf-agave-nerd ttf-dejavu
 
-printf "${GREEN}Setting up external mounting...${NC}"
+printf "${GREEN}Installing external mounting packages...${NC}"
 echo ""
 sudo pacman -S udisks2 udiskie
 
