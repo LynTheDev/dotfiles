@@ -46,8 +46,7 @@ chmod +x ./setup.sh
 cd ..
 rm -rf rofi
 
-printf "${BLUE}Do you want to install yay? (Y/n)"
-echo ""
+printf "${BLUE}Do you want to install yay? (Y/n) ${NC}"
 read -r YAY
 
 case $YAY in
@@ -69,6 +68,25 @@ case $YAY in
 		printf "${RED}Skipping yay installation..${NC}"
 		echo ""
     ;;
+esac
+
+printf "${BLUE}Do you want to install themes?${NC}"
+echo ""
+printf "${RED}NOTE:${NC} This only works if you chose to install yay."
+echo "(Y/n) "
+read -r THEMES
+
+case $THEMES in
+	y)
+		yay -S qogir-icon-theme pocillo-gtk-theme-git
+	;;
+	Y)
+		yay -S qogir-icon-theme pocillo-gtk-theme-git
+	;;
+	*)
+		printf "${RED}Skipping theme installation..${NC}"
+		echo ""
+	;;
 esac
 
 printf "${GREEN}Done. Please run arandr and replace screen_layout.sh with your current setup."
