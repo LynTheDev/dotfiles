@@ -209,3 +209,10 @@ exec_always --no-startup-id dunst
 
 # Disk mounting
 exec --no-startup-id udiskie &
+
+# Create autolock
+    bindsym Control+$mod+l exec --no-startup-id "i3lock -c 000000"
+    # Use autolock to lock after 5 mins of sleep-
+    # Comment out this line if you aree at a remote job ;3
+    exec --no-startup-id "xautolock -detectsleep -time 5 -locker \"i3lock -c 000000\""
+
