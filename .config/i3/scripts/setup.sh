@@ -26,23 +26,7 @@ esac
 
 printf "${GREEN}Installing packages..${RED}"
 echo ""
-sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver i3 polybar dunst lxappearance 
-
-printf "${BLUE}Would you like to install xfce4-terminal, or konsole? (1/2)${NC}"
-echo ""
-read -r TERM
-
-case $TERM in
-    1)
-		sudo pacman -S xfce4-terminal
-    ;;
-    2)
-		sudo pacman -S konsole
-    ;;
-    *)
-		echo "Unknown, continuing without a terminal."
-    ;;
-esac
+sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver xautolock xfce4-terminal i3 i3lock polybar dunst lxappearance 
 
 printf "${GREEN}Installing fonts...${NC}"
 sudo pacman -S ttf-font-awesome ttf-agave-nerd ttf-dejavu
