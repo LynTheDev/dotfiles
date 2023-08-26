@@ -46,6 +46,31 @@ chmod +x ./setup.sh
 cd ..
 rm -rf rofi
 
+printf "${BLUE}Do you want to install yay? (Y/n)"
+echo ""
+read -r YAY
+
+case $YAY in
+    y)
+		git clone https://aur.archlinux.org/yay.git
+		cd yay
+		makepkg -si
+		cd ..
+		rm -rf yay
+	;;
+	Y)
+		git clone https://aur.archlinux.org/yay.git
+		cd yay
+		makepkg -si
+		cd ..
+		rm -rf yay
+    ;;
+    *)
+		printf "${RED}Skipping yay installation..${NC}"
+		echo ""
+    ;;
+esac
+
 printf "${GREEN}Done. Please run arandr and replace screen_layout.sh with your current setup."
 echo ""
 echo "dont forget to cp the contents of the base folder to your .config!"
