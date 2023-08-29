@@ -26,7 +26,7 @@ esac
 
 printf "${GREEN}Installing base packages..${NC}"
 echo ""
-sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver xautolock xfce4-terminal i3 i3lock polybar dunst lxappearance python-dbus
+sudo pacman -S rofi flameshot feh picom arandr pcmanfm xarchiver xautolock unzip gvfs xfce4-terminal i3 i3lock polybar dunst lxappearance python-dbus
 
 printf "${GREEN}Installing font packages...${NC}"
 sudo pacman -S ttf-font-awesome ttf-agave-nerd ttf-dejavu
